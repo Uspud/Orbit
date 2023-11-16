@@ -10,7 +10,7 @@ def requester(url):
         return requests.get("https://blockchain.info/rawaddr/" + url).text
          
 
-def ether_requester(address, etherscan_api_key = 'HWEFSWY2MIXCIDX3XSJPDGBI22Q9RIQXNA'):
+def ether_requester(address, etherscan_api_key = ''):
     # Using regex pattern to distinguish address pattern 
     wallet_address_pattern = re.compile('^0x[a-fA-F0-9]{40}$')
     transaction_hash_pattern = re.compile('^0x[a-fA-F0-9]{64}$')
